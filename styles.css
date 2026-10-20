@@ -1,0 +1,63 @@
+:root {
+    --background: #0d0d0f;
+    --cards: #141418;
+    --border: #262630;
+    --border-light: #3a3a48;
+    --main-text: #f0f0f2;
+    --secondary-text: #8a8a9e;
+    --hazard-orange: #ff5e00;
+    --blueprint-cyan: #00e5ff;
+    --status-green: #10b981;
+
+    /* Fuentes */
+    --font-sans: 'Inter', -apple-system, sans-serif;
+    --font-mono: 'Space Mono', 'JetBrains Mono', monospace;
+}
+body {
+    background-color: var(--background);
+    color: var(--main-text);
+    font-family: var(--font-mono);
+}
+
+.bg-card {
+    background-color: var(--cards);
+}
+
+.border-subtle {
+    border: 1px solid var(--border);
+}
+
+.border-subtle:hover {
+    border-color: var(--border-light);
+}
+
+.text-main {
+    color: var(--main-text);
+}
+
+.text-secondary {
+    color: var(--secondary-text);
+}
+
+.text-orange {
+    color: var(--hazard-orange);
+}
+
+.text-cyan {
+    color: var(--blueprint-cyan);
+}
+
+.bg-status {
+    background-color: var(--status-green);
+}
+
+
+button, input {
+    font-family: inherit;
+}
+
+.filter-btn.active {
+    border-color: var(--blueprint-cyan);
+    color: var(--blueprint-cyan);
+    background-color: rgba(0, 229, 255, 0.05);
+}
