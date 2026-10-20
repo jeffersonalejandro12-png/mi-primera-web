@@ -9,33 +9,87 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     
-    <!-- Enlace a tu hoja de estilos independiente -->
+    <!-- Hoja de estilos -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- CONTENEDOR PRINCIPAL QUE CENTRA Y DA MARGEN -->
-    <main class="max-w-3xl mx-auto px-6 py-12">
+    <!-- CONTENEDOR PRINCIPAL -->
+    <main class="container">
         
         <!-- ENCABEZADO / PERFIL PRINCIPAL -->
-        <header class="border-b border-subtle pb-8 mb-12 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+        <header class="header">
             <div>
-                <div class="flex items-center gap-2 mb-2">
-                    <span class="inline-block w-2.5 h-2.5 bg-status rounded-full animate-pulse"></span>
-                    <span class="text-xs tracking-wider uppercase text-secondary">SYS_STATUS: ONLINE</span>
+                <div class="status-badge">
+                    <span class="status-dot"></span>
+                    <span class="text-xs uppercase text-secondary">SYS_STATUS: ONLINE</span>
                 </div>
-                <h1 class="text-3xl font-bold tracking-tight text-main">Jefferson Alejandro</h1>
-                <p class="text-sm text-secondary mt-1">Software Dev & Business Architecture</p>
+                <h1 class="title">Jefferson Alejandro</h1>
+                <p class="subtitle">Software Dev & Business Architecture</p>
             </div>
-            <div class="text-right text-xs text-secondary border border-subtle p-3 rounded bg-card">
+            <div class="info-card">
                 <div>LOC: ITAGÜÍ, CO</div>
                 <div class="text-cyan mt-1">STACK: TS / NEXT / GO / PY</div>
             </div>
         </header>
 
+        <!-- SECCIÓN: TERMINAL CLI INTERACTIVA -->
+        <section class="section">
+            <h2 class="section-title"># Terminal de comandos</h2>
+            <div class="terminal-box">
+                <div id="terminal-output" class="terminal-output">
+                    <div>> Sistema inicializado. Escribe 'help' para ver los comandos disponibles.</div>
+                </div>
+                <div class="terminal-input-row">
+                    <span class="text-orange font-bold">$</span>
+                    <input type="text" id="cli-input" placeholder="ej. help, stack, contact..." autocomplete="off">
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN: MATRIZ TÉCNICA (STACK) -->
+        <section class="section">
+            <div class="section-header">
+                <h2 class="section-title"># Matriz Técnica</h2>
+                <div class="filter-group">
+                    <button class="filter-btn active" data-filter="all">ALL</button>
+                    <button class="filter-btn" data-filter="core">CORE</button>
+                    <button class="filter-btn" data-filter="tools">TOOLS</button>
+                </div>
+            </div>
+            <div class="grid-stack" id="stack-grid">
+                <div class="card-item" data-category="core">
+                    <div class="card-tag text-orange">CORE_01</div>
+                    <div class="card-title">Frontend Engineering</div>
+                    <p class="card-desc">JavaScript, React, Next.js, HTML5, CSS3 semántico.</p>
+                </div>
+                <div class="card-item" data-category="core">
+                    <div class="card-tag text-orange">CORE_02</div>
+                    <div class="card-title">Backend & Systems</div>
+                    <p class="card-desc">Python, Node.js, arquitectura de bases de datos y APIs.</p>
+                </div>
+                <div class="card-item" data-category="tools">
+                    <div class="card-tag text-cyan">TOOL_01</div>
+                    <div class="card-title">AI & Prompt Architecture</div>
+                    <p class="card-desc">Google AI Studio, flujos automatizados, integración LLM.</p>
+                </div>
+                <div class="card-item" data-category="tools">
+                    <div class="card-tag text-cyan">TOOL_02</div>
+                    <div class="card-title">Version Control & Ops</div>
+                    <p class="card-desc">Git, terminal CLI, despliegues ágiles, Linux.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN: CONTACTO -->
+        <footer class="footer">
+            <p class="footer-text">Construido con rigor técnico e iteración continua.</p>
+            <button id="copy-email-btn" class="btn-copy">COPIAR_CORREO</button>
+        </footer>
+
     </main>
 
-    <!-- Enlace a tu script interactivo independiente -->
+    <!-- Script interactivo -->
     <script src="script.js"></script>
 </body>
 </html>
