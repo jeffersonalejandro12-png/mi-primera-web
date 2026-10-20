@@ -19,19 +19,75 @@
         
         <!-- ENCABEZADO / PERFIL PRINCIPAL -->
         <header class="header">
-            <div>
-                <div class="status-badge">
-                    <span class="status-dot"></span>
-                    <span class="text-xs uppercase text-secondary">SYS_STATUS: ONLINE</span>
+            <div style="display: flex; align-items: center; gap: 1.5rem;">
+                <!-- IMAGEN -->
+                <div class="profile-frame">
+                    <!-- Puedes cambiar el src por la ruta de tu foto local ej: "assets/avatar.jpg" -->
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&auto=format&fit=crop&q=80" alt="Jefferson Alejandro" class="profile-img">
                 </div>
-                <h1 class="title">Jefferson Alejandro</h1>
-                <p class="subtitle">Software Dev & Business Architecture</p>
+                <div>
+                    <div class="status-badge">
+                        <span class="status-dot"></span>
+                        <span class="text-xs uppercase text-secondary">SYS_STATUS: ONLINE</span>
+                    </div>
+                    <h1 class="title">Jefferson Alejandro</h1>
+                    <p class="subtitle">Software Dev & Business Architecture</p>
+                </div>
             </div>
             <div class="info-card">
                 <div>LOC: ITAGÜÍ, CO</div>
                 <div class="text-cyan mt-1">STACK: TS / NEXT / GO / PY</div>
             </div>
         </header>
+
+        <!-- SECCIÓN: SOBRE MÍ & ENLACES -->
+        <section class="section">
+            <h2 class="section-title"># Perfil & Canales</h2>
+            <div class="terminal-box">
+                <p style="font-size: 0.8rem; margin-bottom: 0.75rem; color: var(--secondary-text);">
+                    Desarrollador enfocado en arquitectura de sistemas, código limpio y software con propósito humano. Fundador en <a href="https://hicamor.com" target="_blank" class="ind-link">Hicamor</a>. Explora mis repositorios en <a href="https://github.com" target="_blank" class="ind-link">GitHub</a>.
+                </p>
+                
+                <!-- LISTA -->
+                <h3 style="font-size: 0.75rem; text-transform: uppercase; color: var(--main-text); margin-top: 1rem;">// Principios Operativos</h3>
+                <ul class="ind-list">
+                    <li><strong style="color: var(--main-text);">Separación de responsabilidades:</strong> Arquitectura modular clara entre estructura, estilo y lógica.</li>
+                    <li><strong style="color: var(--main-text);">Rigor técnico:</strong> Control de versiones estricto con Git y código mantenible.</li>
+                    <li><strong style="color: var(--main-text);">Enfoque Lean:</strong> Soluciones ultra-eficientes optimizadas para recursos acotados.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- SECCIÓN: TABLA DE EXPERIENCIA / TRAYECTORIA -->
+        <section class="section">
+            <h2 class="section-title"># Historial de Proyectos</h2>
+            <table class="ind-table">
+                <thead>
+                    <tr>
+                        <th>Proyecto</th>
+                        <th>Rol / Enfoque</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="font-weight: 700; color: var(--main-text);">Hicamor Studio</td>
+                        <td>Business Architecture & Systems</td>
+                        <td><span style="color: var(--status-green);">ACTIVE</span></td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: 700; color: var(--main-text);">Moroma B2B</td>
+                        <td>Frontend & Brand Identity</td>
+                        <td><span style="color: var(--blueprint-cyan);">COMPLETED</span></td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: 700; color: var(--main-text);">Cortremit App</td>
+                        <td>AppSheet / Custom Logic</td>
+                        <td><span style="color: var(--hazard-orange);">IN_PROGRESS</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
 
         <!-- SECCIÓN: TERMINAL CLI INTERACTIVA -->
         <section class="section">

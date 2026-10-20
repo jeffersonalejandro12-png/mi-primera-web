@@ -257,3 +257,80 @@ body {
 .text-orange { color: var(--hazard-orange); }
 .text-cyan { color: var(--blueprint-cyan); }
 .mt-1 { margin-top: 0.25rem; }
+
+/* ESTILOS PARA TABLAS INDUSTRIALES */
+.ind-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.75rem;
+    margin-top: 1rem;
+    background-color: var(--cards);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.ind-table th, .ind-table td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+}
+
+.ind-table th {
+    background-color: rgba(255, 255, 255, 0.02);
+    color: var(--secondary-text);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 700;
+}
+
+.ind-table tr:last-child td {
+    border-bottom: none;
+}
+
+.ind-table tr:hover td {
+    background-color: rgba(255, 255, 255, 0.01);
+}
+
+/* ESTILOS PARA CONTENEDOR DE IMAGEN */
+.profile-frame {
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: var(--cards);
+    padding: 0.5rem;
+    display: inline-block;
+}
+
+.profile-img {
+    width: 100%;
+    max-width: 100px;
+    height: auto;
+    border-radius: 2px;
+    display: block;
+    filter: grayscale(20%);
+}
+
+/* ESTILOS PARA LISTAS */
+.ind-list {
+    list-style-type: square;
+    padding-left: 1.2rem;
+    font-size: 0.75rem;
+    color: var(--secondary-text);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+/* ESTILOS PARA ENLACES */
+.ind-link {
+    color: var(--blueprint-cyan);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--blueprint-cyan);
+}
+
+.ind-link:hover {
+    color: var(--hazard-orange);
+    border-color: var(--hazard-orange);
+}
