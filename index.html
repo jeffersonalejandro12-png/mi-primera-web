@@ -1,37 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jefferson Alejandro | Portafolio de Desarrollador</title>
-    <!-- Tailwind CSS CDN-->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        background: '#0d0d0f',
-                        cards: '#141418',
-                        border: '#262630',
-                        borderLight: '#3a3a48',
-                        mainText: '#f0f0f2',
-                        secondaryText: '#8a8a9e',
-                        hazardOrange: '#ff5e00',
-                        bluePrintCyan: '#00e5ff',
-                        statusGreen: '#10b981',
-                    },
-                    fontFamily: {
-                        sans: ['Inter', '-apple-system', 'sans-serif'],
-                        mono: ['Space Mono', 'JetBrains Mono', 'monospace'],
-                    },
-                },
-            },
-        }
-    </script>
+    <title>Jefferson Alejandro | Dev Portfolio</title>
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Enlace a tu hoja de estilos independiente -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    Jefferson Alejandro | Portafolio de Desarrollador
+
+    <!-- CONTENEDOR PRINCIPAL QUE CENTRA Y DA MARGEN -->
+    <main class="max-w-3xl mx-auto px-6 py-12">
+        
+        <!-- ENCABEZADO / PERFIL PRINCIPAL -->
+        <header class="border-b border-subtle pb-8 mb-12 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+            <div>
+                <div class="flex items-center gap-2 mb-2">
+                    <span class="inline-block w-2.5 h-2.5 bg-status rounded-full animate-pulse"></span>
+                    <span class="text-xs tracking-wider uppercase text-secondary">SYS_STATUS: ONLINE</span>
+                </div>
+                <h1 class="text-3xl font-bold tracking-tight text-main">Jefferson Alejandro</h1>
+                <p class="text-sm text-secondary mt-1">Software Dev & Business Architecture</p>
+            </div>
+            <div class="text-right text-xs text-secondary border border-subtle p-3 rounded bg-card">
+                <div>LOC: ITAGÜÍ, CO</div>
+                <div class="text-cyan mt-1">STACK: TS / NEXT / GO / PY</div>
+            </div>
+        </header>
+
+    </main>
+
+    <!-- Enlace a tu script interactivo independiente -->
+    <script src="script.js"></script>
 </body>
 </html>
