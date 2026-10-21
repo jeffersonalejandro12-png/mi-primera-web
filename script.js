@@ -9,10 +9,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Diccionario de comandos y sus respuestas
     const commands = {
-        'help': 'Comandos disponibles: help, stack, status, clear, contact',
-        'stack': 'Core: React, Next.js, JS/TS, Python | Tools: Git, Google AI Studio, Linux',
-        'status': 'Sistemas operativos al 100%. Estado: Disponible para proyectos.',
-        'contact': 'Canal principal: jeffersonalejandro12@gmail.com',
+        'help': 'Available commands: help, focus, status, contact, clear',
+        'focus': 'Core: Business Architecture, Venture Building, Systems Governance, Lean Execution',
+        'status': 'Systems online. Status: Actively governing and building sustainable ventures.',
+        'contact': 'Primary channel: jeffersonalejandro12@gmail.com',
         'clear': 'CLEAR'
     };
 
