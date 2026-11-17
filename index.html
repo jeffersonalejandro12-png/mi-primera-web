@@ -1,130 +1,188 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jefferson Alejandro | Dev Portfolio</title>
+    <title>Jefferson Alejandro | Systems Architecture</title>
     
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
     
+    <!-- Configuración de tus colores exactos para Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        background: '#0d0d0f',
+                        cards: '#141418',
+                        borderSubtle: '#262630',
+                        borderLight: '#3a3a48',
+                        mainText: '#f0f0f2',
+                        secondaryText: '#8a8a9e',
+                        hazardOrange: '#ff5e00',
+                        blueprintCyan: '#00e5ff',
+                        statusGreen: '#10b981',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', '-apple-system', 'sans-serif'],
+                        mono: ['Space Mono', 'JetBrains Mono', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Tu styles.css mínimo -->
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <main class="container">
-        <header class="header">
-            <div style="display: flex; align-items: center; gap: 1.5rem;">
-                <div class="profile-frame">
-                    <img src="foto_perfil_Alejandro.JPG" alt="Jefferson Alejandro" class="profile-img">
+<body class="bg-background text-mainText antialiased selection:bg-hazardOrange selection:text-black">
+
+    <main class="max-w-3xl mx-auto px-6 py-12 space-y-12">
+        
+        <!-- HEADER -->
+        <header class="border-b border-borderSubtle pb-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+            <div class="flex items-center gap-5">
+                <div class="border border-borderSubtle bg-cards p-1.5 rounded hover:border-borderLight transition-colors">
+                    <img src="foto_perfil_Alejandro.JPG" alt="Jefferson Alejandro" class="w-20 h-20 object-cover rounded-sm grayscale-[25%] hover:grayscale-0 transition-all duration-300">
                 </div>
                 <div>
-                    <h1 class="title">Jefferson Alejandro</h1>
-                    <p class="subtitle">Business manager
-                    </p>
+                    <div class="flex items-center gap-2 mb-1.5">
+                        <span class="w-2 h-2 rounded-full bg-statusGreen inline-block animate-pulse"></span>
+                        <span class="text-[11px] uppercase tracking-widest text-secondaryText">SYS_STATUS: ONLINE</span>
+                    </div>
+                    <h1 class="font-sans text-2xl sm:text-3xl font-bold tracking-tight text-mainText">Jefferson Alejandro</h1>
+                    <p class="text-xs text-secondaryText mt-0.5">Business manager</p>
                 </div>
             </div>
-            <div class="info-card">
-                <div>LOC: ITAGÜÍ, COLOMBIA</div>
-                <div class="text-cyan mt-1">CORE: SYSTEMS ARCHITECTURE</div>
+            
+            <div class="w-full md:w-auto border border-borderSubtle bg-cards px-4 py-3 rounded text-[11px] text-secondaryText md:text-right space-y-1">
+                <div>LOC: <span class="text-mainText">ITAGÜÍ, COLOMBIA</span></div>
+                <div class="text-blueprintCyan font-bold">CORE: SYSTEMS ARCHITECTURE</div>
             </div>
         </header>
 
-        <section class="section">
-            <h2 class="section-title"># Profile</h2>
-            <div class="terminal-box">
-                <p style="font-size: 0.8rem; margin-bottom: 0.75rem; color: var(--secondary-text);">
-                    Business manager focused on systems architecture, sustainable business models, and lean execution. Founder at <a href="https://hicamor.com" target="_blank" class="ind-link">Hicamor</a>. Connect via <a href="https://linkedin.com/in/jefferson-alejandro?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank" class="ind-link">LinkedIn</a>.
+        <!-- SECTION: PROFILE -->
+        <section class="space-y-3">
+            <h2 class="text-[11px] uppercase tracking-widest text-secondaryText"># Profile</h2>
+            <div class="border border-borderSubtle bg-cards rounded p-5 space-y-4">
+                <p class="font-sans text-xs leading-relaxed text-secondaryText">
+                    Business manager focused on systems architecture, sustainable business models, and lean execution. Founder at <a href="https://hicamor.com" target="_blank" class="text-blueprintCyan border-b border-dotted border-blueprintCyan hover:text-hazardOrange hover:border-hazardOrange transition-colors">Hicamor</a>. Connect via <a href="https://linkedin.com/in/jefferson-alejandro?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank" class="text-blueprintCyan border-b border-dotted border-blueprintCyan hover:text-hazardOrange hover:border-hazardOrange transition-colors">LinkedIn</a>.
                 </p>
-                <h3 style="font-size: 0.75rem; text-transform: uppercase; color: var(--main-text); margin-top: 1rem;">// STRUCTURAL CONSTANTS</h3>
-                <ul class="ind-list">
-                    <li><strong style="color: var(--main-text);">Human dignity:</strong> lacing people, genuine care, and the reduction of suffering at the core of every structural decision.</li>
-                    <li><strong style="color: var(--main-text);">Value for Wellbeing:</strong> Building durable economic engines and systems explicitly dedicated to cultivating long-term collective wellbeing.</li>
-                    <li><strong style="color: var(--main-text);">Conscious Stewardship:</strong> Managing resources with rigorous execution while serving our shared ecosystem rather than pursuing empty metrics.</li>
-                </ul>
-            </div>
-        </section>
-
-        <section class="section">
-    <h2 class="section-title"># Ecosystem Index</h2>
-    <table class="ind-table">
-        <thead>
-            <tr>
-                <th>Project</th>
-                <th>Architecture</th>
-                <th>Status</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td style="font-weight: 700; color: var(--main-text);">Hicamor</td>
-                <td>Ecosystem Governance</td>
-                <td><span style="color: var(--status-green);">ACTIVE</span></td>
-            </tr>
-            <tr>
-                <td style="font-weight: 700; color: var(--main-text);">Cortremit</td>
-                <td>Adventure Brand</td>
-                <td><span style="color: var(--hazard-orange);">IN_EXECUTION</span></td>
-            </tr>
-            <tr>
-                <td style="font-weight: 700; color: var(--main-text);">Moroma B2B</td>
-                <td>Strategic Positioning</td>
-                <td><span style="color: var(--blueprint-cyan);">CONSOLIDATED</span></td>
-            </tr>
-        </tbody>
-    </table>
-</section>
-
-        <section class="section">
-            <h2 class="section-title"># Terminal Interface</h2>
-            <div class="terminal-box">
-                <div id="terminal-output" class="terminal-output">
-                    <div>> System initialized. Type 'help' for available commands.</div>
-                </div>
-                <div class="terminal-input-row">
-                    <span class="text-orange font-bold">$</span>
-                    <input type="text" id="cli-input" placeholder="e.g. help, focus, status, contact..." autocomplete="off">
+                <div class="pt-3 border-t border-borderSubtle/60">
+                    <h3 class="text-[11px] uppercase tracking-wider text-mainText font-bold mb-2">// STRUCTURAL CONSTANTS</h3>
+                    <ul class="list-disc marker:text-hazardOrange pl-4 space-y-2 text-[11px] text-secondaryText leading-relaxed">
+                        <li><strong class="text-mainText">Human dignity:</strong> Placing people, genuine care, and the reduction of suffering at the core of every structural decision.</li>
+                        <li><strong class="text-mainText">Value for Wellbeing:</strong> Building durable economic engines and systems explicitly dedicated to cultivating long-term collective wellbeing.</li>
+                        <li><strong class="text-mainText">Conscious Stewardship:</strong> Managing resources with rigorous execution while serving our shared ecosystem rather than pursuing empty metrics.</li>
+                    </ul>
                 </div>
             </div>
         </section>
 
-<section class="section">
-    <div class="section-header">
-        <h2 class="section-title"># Operational Stack</h2>
-        <div class="filter-group">
-            <button class="filter-btn active" data-filter="all">ALL</button>
-            <button class="filter-btn" data-filter="core">CORE</button>
-            <button class="filter-btn" data-filter="ops">OPS</button>
-        </div>
-    </div>
-    <div class="grid-stack" id="stack-grid">
-        <div class="card-item" data-category="core">
-            <div class="card-tag text-orange">CORE_01</div>
-            <div class="card-title">Business Architecture</div>
-            <p class="card-desc">System design, structural governance, and sustainable business modeling.</p>
-        </div>
-        <div class="card-item" data-category="core">
-            <div class="card-tag text-orange">CORE_02</div>
-            <div class="card-title">Lean Operations</div>
-            <p class="card-desc">Resource allocation, bottleneck analysis, and ultra-lean execution.</p>
-        </div>
-        <div class="card-item" data-category="ops">
-            <div class="card-tag text-cyan">OPS_01</div>
-            <div class="card-title">AI & Prompt Architecture</div>
-            <p class="card-desc">LLM integration, workflow automation, and agentic intelligence.</p>
-        </div>
-        <div class="card-item" data-category="ops">
-            <div class="card-tag text-cyan">OPS_02</div>
-            <div class="card-title">Data & Relational Systems</div>
-            <p class="card-desc">Structured databases, economic governance, and material tracking.</p>
-        </div>
-    </div>
-</section>
+        <!-- SECTION: ECOSYSTEM INDEX -->
+        <section class="space-y-3">
+            <h2 class="text-[11px] uppercase tracking-widest text-secondaryText"># Ecosystem Index</h2>
+            <div class="border border-borderSubtle bg-cards rounded overflow-x-auto">
+                <table class="w-full text-left border-collapse text-xs">
+                    <thead>
+                        <tr class="bg-white/[0.02] border-b border-borderSubtle text-secondaryText uppercase tracking-wider text-[11px]">
+                            <th class="py-3 px-4 font-bold">Project</th>
+                            <th class="py-3 px-4 font-bold">Architecture</th>
+                            <th class="py-3 px-4 font-bold text-right">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-borderSubtle text-[11px]">
+                        <tr class="hover:bg-white/[0.02] transition-colors">
+                            <td class="py-3.5 px-4 font-bold text-mainText">Hicamor</td>
+                            <td class="py-3.5 px-4 text-secondaryText">Ecosystem Governance</td>
+                            <td class="py-3.5 px-4 text-right">
+                                <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-statusGreen/10 text-statusGreen border border-statusGreen/30 font-bold text-[10px]">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-statusGreen"></span>ACTIVE
+                                </span>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-white/[0.02] transition-colors">
+                            <td class="py-3.5 px-4 font-bold text-mainText">Cortremit</td>
+                            <td class="py-3.5 px-4 text-secondaryText">Adventure Brand</td>
+                            <td class="py-3.5 px-4 text-right">
+                                <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-hazardOrange/10 text-hazardOrange border border-hazardOrange/30 font-bold text-[10px]">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-hazardOrange"></span>IN_EXECUTION
+                                </span>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-white/[0.02] transition-colors">
+                            <td class="py-3.5 px-4 font-bold text-mainText">Moroma B2B</td>
+                            <td class="py-3.5 px-4 text-secondaryText">Strategic Positioning</td>
+                            <td class="py-3.5 px-4 text-right">
+                                <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-blueprintCyan/10 text-blueprintCyan border border-blueprintCyan/30 font-bold text-[10px]">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-blueprintCyan"></span>CONSOLIDATED
+                                </span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
 
-<footer class="footer">
-    <p class="footer-text">Built on material truth, rigorous stewardship, and structural integrity.</p>
-    <button id="copy-email-btn" class="btn-copy">COPY_EMAIL</button>
-</footer>
+        <!-- SECTION: TERMINAL INTERFACE -->
+        <section class="space-y-3">
+            <h2 class="text-[11px] uppercase tracking-widest text-secondaryText"># Terminal Interface</h2>
+            <div class="border border-borderSubtle bg-cards rounded p-4">
+                <div id="terminal-output" class="text-xs text-secondaryText mb-3 h-28 overflow-y-auto flex flex-col gap-1.5 pr-1">
+                    <div><span class="text-blueprintCyan">&gt;</span> System initialized. Type <span class="text-mainText">'help'</span> for available commands.</div>
+                </div>
+                <div class="flex items-center gap-2 border-t border-borderSubtle pt-3">
+                    <span class="text-hazardOrange font-bold text-xs">$</span>
+                    <input type="text" id="cli-input" placeholder="e.g. help, focus, status, contact..." autocomplete="off" class="bg-transparent border-none outline-none w-full text-xs text-mainText placeholder:text-secondaryText/50 font-mono">
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: OPERATIONAL STACK -->
+        <section class="space-y-4">
+            <div class="flex flex-wrap justify-between items-center gap-3">
+                <h2 class="text-[11px] uppercase tracking-widest text-secondaryText"># Operational Stack</h2>
+                <div class="flex gap-2">
+                    <button class="filter-btn active text-[11px] px-2.5 py-1 border border-blueprintCyan text-blueprintCyan bg-blueprintCyan/5 rounded cursor-pointer transition-colors" data-filter="all">ALL</button>
+                    <button class="filter-btn text-[11px] px-2.5 py-1 border border-borderSubtle text-secondaryText hover:text-mainText hover:border-borderLight rounded cursor-pointer transition-colors" data-filter="core">CORE</button>
+                    <button class="filter-btn text-[11px] px-2.5 py-1 border border-borderSubtle text-secondaryText hover:text-mainText hover:border-borderLight rounded cursor-pointer transition-colors" data-filter="ops">OPS</button>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="stack-grid">
+                <div class="card-item border border-borderSubtle bg-cards p-4 rounded hover:border-borderLight transition-colors group" data-category="core">
+                    <div class="text-[11px] text-hazardOrange font-bold mb-1">CORE_01</div>
+                    <div class="font-sans font-bold text-xs text-mainText mb-1 group-hover:text-hazardOrange transition-colors">Business Architecture</div>
+                    <p class="text-[11px] text-secondaryText leading-relaxed">System design, structural governance, and sustainable business modeling.</p>
+                </div>
+                <div class="card-item border border-borderSubtle bg-cards p-4 rounded hover:border-borderLight transition-colors group" data-category="core">
+                    <div class="text-[11px] text-hazardOrange font-bold mb-1">CORE_02</div>
+                    <div class="font-sans font-bold text-xs text-mainText mb-1 group-hover:text-hazardOrange transition-colors">Lean Operations</div>
+                    <p class="text-[11px] text-secondaryText leading-relaxed">Resource allocation, bottleneck analysis, and ultra-lean execution.</p>
+                </div>
+                <div class="card-item border border-borderSubtle bg-cards p-4 rounded hover:border-borderLight transition-colors group" data-category="ops">
+                    <div class="text-[11px] text-blueprintCyan font-bold mb-1">OPS_01</div>
+                    <div class="font-sans font-bold text-xs text-mainText mb-1 group-hover:text-blueprintCyan transition-colors">AI & Prompt Architecture</div>
+                    <p class="text-[11px] text-secondaryText leading-relaxed">LLM integration, workflow automation, and agentic intelligence.</p>
+                </div>
+                <div class="card-item border border-borderSubtle bg-cards p-4 rounded hover:border-borderLight transition-colors group" data-category="ops">
+                    <div class="text-[11px] text-blueprintCyan font-bold mb-1">OPS_02</div>
+                    <div class="font-sans font-bold text-xs text-mainText mb-1 group-hover:text-blueprintCyan transition-colors">Data & Relational Systems</div>
+                    <p class="text-[11px] text-secondaryText leading-relaxed">Structured databases, economic governance, and material tracking.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="border-t border-borderSubtle pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+            <p class="text-[11px] text-secondaryText text-center md:text-left">
+                Built on material truth, rigorous stewardship, and structural integrity.
+            </p>
+            <button id="copy-email-btn" class="text-[11px] font-bold border border-hazardOrange text-hazardOrange hover:bg-hazardOrange hover:text-black px-4 py-2 rounded cursor-pointer transition-all duration-200 shrink-0">
+                COPY_EMAIL
+            </button>
+        </footer>
 
     </main>
 
