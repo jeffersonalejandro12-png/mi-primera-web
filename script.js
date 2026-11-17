@@ -1,107 +1,84 @@
-// Esperamos a que todo el DOM (la estructura HTML) esté completamente cargado
 document.addEventListener('DOMContentLoaded', () => {
-
-    /* ==========================================================================
-       1. TERMINAL CLI INTERACTIVA
-       ========================================================================== */
+    // 1. Terminal CLI Logic
     const cliInput = document.getElementById('cli-input');
     const terminalOutput = document.getElementById('terminal-output');
 
-    // Diccionario de comandos y sus respuestas
     const commands = {
-        'help': 'Available commands: help, focus, status, contact, clear',
-        'focus': 'Core: Business Architecture, Venture Building, Systems Governance, Lean Execution',
-        'status': 'Systems online. Status: Actively governing and building sustainable ventures.',
-        'contact': 'Primary channel: jeffersonalejandro12@gmail.com',
-        'clear': 'CLEAR'
+        'help': "Available commands: help, status, stack, contact, clear",
+        'status': "SYS_STATUS: ONLINE. All systems operating with structural integrity.",
+        'stack': "Core: Business Architecture, Lean Operations, Systems Engineering.",
+        'contact': "Primary communication channel: jeffersonalejandro12@gmail.com",
+        'clear': "CLEAR"
     };
 
     if (cliInput && terminalOutput) {
         cliInput.addEventListener('keydown', (e) => {
-            // Escuchamos únicamente la tecla Enter
             if (e.key === 'Enter') {
                 const query = cliInput.value.trim().toLowerCase();
+                if (!query) return;
 
-                // Mostramos en la terminal la orden que escribió el usuario
+                // Echo input
                 const userLine = document.createElement('div');
-                userLine.textContent = `$ ${cliInput.value}`;
+                userLine.innerHTML = `<span class="text-hazardOrange font-bold">$</span> ${escapeHtml(cliInput.value)}`;
                 terminalOutput.appendChild(userLine);
 
-                // Procesamos la orden
-                if (commands[query]) {
-                    if (query === 'clear') {
-                        terminalOutput.innerHTML = '';
-                    } else {
-                        const responseLine = document.createElement('div');
-                        responseLine.className = 'text-cyan';
-                        responseLine.textContent = `-> ${commands[query]}`;
-                        terminalOutput.appendChild(responseLine);
-                    }
-                } else if (query !== '') {
-                    const errorLine = document.createElement('div');
-                    errorLine.className = 'text-orange';
-                    errorLine.textContent = `-> Comando no reconocido: '${query}'. Escribe 'help' para ver la lista.`;
-                    terminalOutput.appendChild(errorLine);
+                if (query === 'clear') {
+                    terminalOutput.innerHTML = '';
+                } else if (commands[query]) {
+                    const resLine = document.createElement('div');
+                    resLine.innerHTML = `<span class="text-blueprintCyan">&gt;</span> ${commands[query]}`;
+                    terminalOutput.appendChild(resLine);
+                } else {
+                    const errLine = document.createElement('div');
+                    errLine.innerHTML = `<span class="text-hazardOrange">&gt;</span> Command not recognized. Type 'help' for instructions.`;
+                    terminalOutput.appendChild(errLine);
                 }
 
-                // Limpiamos el campo de texto y hacemos scroll automático hacia el final
                 cliInput.value = '';
                 terminalOutput.scrollTop = terminalOutput.scrollHeight;
             }
         });
     }
 
-    /* ==========================================================================
-       2. FILTRADO DE LA MATRIZ TÉCNICA (STACK)
-       ========================================================================== */
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const stackItems = document.querySelectorAll('.card-item');
+    // 2. Dispatch Form Simulation
+    const dispatchForm = document.getElementById('dispatch-form');
+    const formStatus = document.getElementById('form-status');
 
-    filterButtons.forEach(btn => {
-        btn.addEventListener('click', () => {
-            // Quitamos el estado activo de todos los botones
-            filterButtons.forEach(b => b.classList.remove('active'));
-            
-            // Activamos únicamente el botón clickeado
-            btn.classList.add('active');
+    if (dispatchForm) {
+        dispatchForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            formStatus.textContent = "STATUS: TRANSMITTING_PACKET...";
+            formStatus.className = "text-[11px] text-blueprintCyan font-bold";
 
-            const filter = btn.getAttribute('data-filter');
+            setTimeout(() => {
+                formStatus.textContent = "STATUS: TRANSMISSION_SUCCESSFUL";
+                formStatus.className = "text-[11px] text-statusGreen font-bold";
+                dispatchForm.reset();
 
-            // Ocultamos o mostramos los ítems según su categoría
-            stackItems.forEach(item => {
-                const category = item.getAttribute('data-category');
-                if (filter === 'all' || category === filter) {
-                    item.style.display = 'block';
-                } else {
-                    item.style.display = 'none';
-                }
-            });
-        });
-    });
-
-    /* ==========================================================================
-       3. BOTÓN PARA COPIAR CORREO AL PORTAPAPELES
-       ========================================================================== */
-    const copyBtn = document.getElementById('copy-email-btn');
-    if (copyBtn) {
-        copyBtn.addEventListener('click', () => {
-            const email = 'jeffersonalejandro12@gmail.com';
-            
-            // Usamos la API de Clipboard del navegador
-            navigator.clipboard.writeText(email).then(() => {
-                const originalText = copyBtn.textContent;
-                copyBtn.textContent = '¡COPIADO!';
-                copyBtn.style.borderColor = 'var(--status-green)';
-                copyBtn.style.color = 'var(--status-green)';
-
-                // Restauramos el botón después de 2 segundos
                 setTimeout(() => {
-                    copyBtn.textContent = originalText;
-                    copyBtn.style.borderColor = '';
-                    copyBtn.style.color = '';
-                }, 2000);
-            });
+                    formStatus.textContent = "STATUS: READY_TO_TRANSMIT";
+                    formStatus.className = "text-[11px] text-secondaryText";
+                }, 4000);
+            }, 1000);
         });
     }
 
+    // 3. Copy Email Button
+    const copyBtn = document.getElementById('copy-email-btn');
+    if (copyBtn) {
+        copyBtn.addEventListener('click', () => {
+            navigator.clipboard.writeText('jeffersonalejandro12@gmail.com');
+            const originalText = copyBtn.textContent;
+            copyBtn.textContent = 'COPIED_TO_CLIPBOARD';
+            copyBtn.classList.add('bg-hazardOrange', 'text-black');
+            setTimeout(() => {
+                copyBtn.textContent = originalText;
+                copyBtn.classList.remove('bg-hazardOrange', 'text-black');
+            }, 2000);
+        });
+    }
 });
+
+function escaparHtml(text) {
+    return text.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+}
