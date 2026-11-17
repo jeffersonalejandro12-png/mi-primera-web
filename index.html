@@ -1,16 +1,22 @@
 <!DOCTYPE html>
-<html lang="es" class="dark">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jefferson Alejandro | Systems Architecture</title>
     
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Configuración de tus colores exactos para Tailwind -->
+    <!-- Configuración de diseño y paleta de colores -->
     <script>
         tailwind.config = {
+            darkMode: 'class',
             theme: {
                 extend: {
                     colors: {
@@ -33,17 +39,17 @@
         }
     </script>
 
-    <!-- Tu styles.css mínimo -->
+    <!-- Hoja de estilos mínima indispensable -->
     <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-background text-mainText antialiased selection:bg-hazardOrange selection:text-black">
+<body class="bg-background text-mainText font-mono antialiased selection:bg-hazardOrange selection:text-black">
 
     <main class="max-w-3xl mx-auto px-6 py-12 space-y-12">
         
         <!-- HEADER -->
         <header class="border-b border-borderSubtle pb-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
             <div class="flex items-center gap-5">
-                <div class="border border-borderSubtle bg-cards p-1.5 rounded hover:border-borderLight transition-colors">
+                <div class="border border-borderSubtle bg-cards p-1.5 rounded hover:border-borderLight transition-colors shrink-0">
                     <img src="foto_perfil_Alejandro.JPG" alt="Jefferson Alejandro" class="w-20 h-20 object-cover rounded-sm grayscale-[25%] hover:grayscale-0 transition-all duration-300">
                 </div>
                 <div>
@@ -52,7 +58,7 @@
                         <span class="text-[11px] uppercase tracking-widest text-secondaryText">SYS_STATUS: ONLINE</span>
                     </div>
                     <h1 class="font-sans text-2xl sm:text-3xl font-bold tracking-tight text-mainText">Jefferson Alejandro</h1>
-                    <p class="text-xs text-secondaryText mt-0.5">Business manager</p>
+                    <p class="text-xs text-secondaryText mt-0.5">Business Manager & Systems Architect</p>
                 </div>
             </div>
             
@@ -64,66 +70,66 @@
 
         <!-- SECTION: PROFILE -->
         <section class="space-y-3">
-            <h2 class="text-[11px] uppercase tracking-widest text-secondaryText"># Profile</h2>
+            <h2 class="text-[11px] uppercase tracking-widest text-secondaryText"># Profile & Constants</h2>
             <div class="border border-borderSubtle bg-cards rounded p-5 space-y-4">
                 <p class="font-sans text-xs leading-relaxed text-secondaryText">
-                    Business manager focused on systems architecture, sustainable business models, and lean execution. Founder at <a href="https://hicamor.com" target="_blank" class="text-blueprintCyan border-b border-dotted border-blueprintCyan hover:text-hazardOrange hover:border-hazardOrange transition-colors">Hicamor</a>. Connect via <a href="https://linkedin.com/in/jefferson-alejandro?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank" class="text-blueprintCyan border-b border-dotted border-blueprintCyan hover:text-hazardOrange hover:border-hazardOrange transition-colors">LinkedIn</a>.
+                    Business manager focused on systems architecture, sustainable business models, and lean execution. Driving initiatives at <span class="text-mainText font-bold">Clan_Nakamoto</span>, <span class="text-mainText font-bold">RuedaLibre</span>, and <span class="text-mainText font-bold">Tailwear</span>. Connect via <a href="https://linkedin.com/in/jefferson-alejandro?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank" rel="noopener noreferrer" class="text-blueprintCyan border-b border-dotted border-blueprintCyan hover:text-hazardOrange hover:border-hazardOrange transition-colors">LinkedIn</a>.
                 </p>
                 <div class="pt-3 border-t border-borderSubtle/60">
                     <h3 class="text-[11px] uppercase tracking-wider text-mainText font-bold mb-2">// STRUCTURAL CONSTANTS</h3>
                     <ul class="list-disc marker:text-hazardOrange pl-4 space-y-2 text-[11px] text-secondaryText leading-relaxed">
                         <li><strong class="text-mainText">Human dignity:</strong> Placing people, genuine care, and the reduction of suffering at the core of every structural decision.</li>
                         <li><strong class="text-mainText">Value for Wellbeing:</strong> Building durable economic engines and systems explicitly dedicated to cultivating long-term collective wellbeing.</li>
-                        <li><strong class="text-mainText">Conscious Stewardship:</strong> Managing resources with rigorous execution while serving our shared ecosystem rather than pursuing empty metrics.</li>
+                        <li><strong class="text-mainText">Conscious Stewardship:</strong> Managing resources with rigorous execution while serving our shared ecosystem rather than empty metrics.</li>
                     </ul>
                 </div>
             </div>
         </section>
 
-       <!-- SECTION: ECOSYSTEM INDEX -->
-<section class="space-y-3">
-    <h2 class="text-[11px] uppercase tracking-widest text-secondaryText"># Ecosystem Index</h2>
-    <div class="border border-borderSubtle bg-cards rounded overflow-x-auto">
-        <table class="w-full text-left border-collapse text-xs">
-            <thead>
-                <tr class="bg-white/[0.02] border-b border-borderSubtle text-secondaryText uppercase tracking-wider text-[11px]">
-                    <th class="py-3 px-4 font-bold">Project / Initiative</th>
-                    <th class="py-3 px-4 font-bold">Focus & Architecture</th>
-                    <th class="py-3 px-4 font-bold text-right">Status</th>
-                </tr>
-            </thead>
-            <tbody class="divide-y divide-borderSubtle text-[11px]">
-                <tr class="hover:bg-white/[0.02] transition-colors">
-                    <td class="py-3.5 px-4 font-bold text-mainText">Clan_Nakamoto</td>
-                    <td class="py-3.5 px-4 text-secondaryText">Decentralized Governance</td>
-                    <td class="py-3.5 px-4 text-right">
-                        <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-statusGreen/10 text-statusGreen border border-statusGreen/30 font-bold text-[10px]">
-                            <span class="w-1.5 h-1.5 rounded-full bg-statusGreen"></span>ACTIVE
-                        </span>
-                    </td>
-                </tr>
-                <tr class="hover:bg-white/[0.02] transition-colors">
-                    <td class="py-3.5 px-4 font-bold text-mainText">RuedaLibre</td>
-                    <td class="py-3.5 px-4 text-secondaryText">Mobility & Route Systems</td>
-                    <td class="py-3.5 px-4 text-right">
-                        <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-hazardOrange/10 text-hazardOrange border border-hazardOrange/30 font-bold text-[10px]">
-                            <span class="w-1.5 h-1.5 rounded-full bg-hazardOrange"></span>IN_EXECUTION
-                        </span>
-                    </td>
-                </tr>
-                <tr class="hover:bg-white/[0.02] transition-colors">
-                    <td class="py-3.5 px-4 font-bold text-mainText">Tailwear</td>
-                    <td class="py-3.5 px-4 text-secondaryText">Textile Infrastructure</td>
-                    <td class="py-3.5 px-4 text-right">
-                        <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-blueprintCyan/10 text-blueprintCyan border border-blueprintCyan/30 font-bold text-[10px]">
-                            <span class="w-1.5 h-1.5 rounded-full bg-blueprintCyan"></span>CONSOLIDATED
-                        </span>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-</section>
+        <!-- SECTION: ECOSYSTEM INDEX (TABLE) -->
+        <section class="space-y-3">
+            <h2 class="text-[11px] uppercase tracking-widest text-secondaryText"># Ecosystem Index</h2>
+            <div class="border border-borderSubtle bg-cards rounded overflow-x-auto">
+                <table class="w-full text-left border-collapse text-xs">
+                    <thead>
+                        <tr class="bg-white/[0.02] border-b border-borderSubtle text-secondaryText uppercase tracking-wider text-[11px]">
+                            <th class="py-3 px-4 font-bold">Project</th>
+                            <th class="py-3 px-4 font-bold">Architecture / Focus</th>
+                            <th class="py-3 px-4 font-bold text-right">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-borderSubtle text-[11px]">
+                        <tr class="hover:bg-white/[0.02] transition-colors">
+                            <td class="py-3.5 px-4 font-bold text-mainText">Clan_Nakamoto</td>
+                            <td class="py-3.5 px-4 text-secondaryText">Decentralized Governance & Protocol</td>
+                            <td class="py-3.5 px-4 text-right">
+                                <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-statusGreen/10 text-statusGreen border border-statusGreen/30 font-bold text-[10px]">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-statusGreen"></span>ACTIVE
+                                </span>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-white/[0.02] transition-colors">
+                            <td class="py-3.5 px-4 font-bold text-mainText">RuedaLibre</td>
+                            <td class="py-3.5 px-4 text-secondaryText">Mobility & Route Infrastructure</td>
+                            <td class="py-3.5 px-4 text-right">
+                                <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-hazardOrange/10 text-hazardOrange border border-hazardOrange/30 font-bold text-[10px]">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-hazardOrange"></span>IN_EXECUTION
+                                </span>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-white/[0.02] transition-colors">
+                            <td class="py-3.5 px-4 font-bold text-mainText">Tailwear</td>
+                            <td class="py-3.5 px-4 text-secondaryText">Textile Systems & Material Memory</td>
+                            <td class="py-3.5 px-4 text-right">
+                                <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-blueprintCyan/10 text-blueprintCyan border border-blueprintCyan/30 font-bold text-[10px]">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-blueprintCyan"></span>CONSOLIDATED
+                                </span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
 
         <!-- SECTION: TERMINAL INTERFACE -->
         <section class="space-y-3">
@@ -134,43 +140,41 @@
                 </div>
                 <div class="flex items-center gap-2 border-t border-borderSubtle pt-3">
                     <span class="text-hazardOrange font-bold text-xs">$</span>
-                    <input type="text" id="cli-input" placeholder="e.g. help, focus, status, contact..." autocomplete="off" class="bg-transparent border-none outline-none w-full text-xs text-mainText placeholder:text-secondaryText/50 font-mono">
+                    <input type="text" id="cli-input" placeholder="e.g. help, status, stack, contact..." autocomplete="off" class="bg-transparent border-none outline-none w-full text-xs text-mainText placeholder:text-secondaryText/50 font-mono">
                 </div>
             </div>
         </section>
 
-        <!-- SECTION: OPERATIONAL STACK -->
-        <section class="space-y-4">
-            <div class="flex flex-wrap justify-between items-center gap-3">
-                <h2 class="text-[11px] uppercase tracking-widest text-secondaryText"># Operational Stack</h2>
-                <div class="flex gap-2">
-                    <button class="filter-btn active text-[11px] px-2.5 py-1 border border-blueprintCyan text-blueprintCyan bg-blueprintCyan/5 rounded cursor-pointer transition-colors" data-filter="all">ALL</button>
-                    <button class="filter-btn text-[11px] px-2.5 py-1 border border-borderSubtle text-secondaryText hover:text-mainText hover:border-borderLight rounded cursor-pointer transition-colors" data-filter="core">CORE</button>
-                    <button class="filter-btn text-[11px] px-2.5 py-1 border border-borderSubtle text-secondaryText hover:text-mainText hover:border-borderLight rounded cursor-pointer transition-colors" data-filter="ops">OPS</button>
-                </div>
-            </div>
+        <!-- SECTION: DISPATCH & CONTACT FORM -->
+        <section class="space-y-3">
+            <h2 class="text-[11px] uppercase tracking-widest text-secondaryText"># Secure Dispatch / Contact Form</h2>
+            <div class="border border-borderSubtle bg-cards rounded p-5 space-y-4">
+                <p class="text-xs text-secondaryText">Send a direct transmission or inquiry regarding system architecture, operations, or ecosystem ventures.</p>
+                
+                <form id="dispatch-form" class="space-y-4 pt-2">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="space-y-1.5">
+                            <label class="block text-[11px] uppercase tracking-wider text-secondaryText font-bold" for="sender-name">Origin / Name</label>
+                            <input type="text" id="sender-name" required placeholder="e.g. Operator Name" class="w-full bg-background border border-borderSubtle focus:border-blueprintCyan rounded px-3 py-2 text-xs text-mainText outline-none transition-colors">
+                        </div>
+                        <div class="space-y-1.5">
+                            <label class="block text-[11px] uppercase tracking-wider text-secondaryText font-bold" for="sender-channel">Return Channel (Email)</label>
+                            <input type="email" id="sender-channel" required placeholder="operator@domain.com" class="w-full bg-background border border-borderSubtle focus:border-blueprintCyan rounded px-3 py-2 text-xs text-mainText outline-none transition-colors">
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-1.5">
+                        <label class="block text-[11px] uppercase tracking-wider text-secondaryText font-bold" for="dispatch-message">Transmission Payload</label>
+                        <textarea id="dispatch-message" rows="3" required placeholder="Write your inquiry or proposal details here..." class="w-full bg-background border border-borderSubtle focus:border-blueprintCyan rounded px-3 py-2 text-xs text-mainText outline-none transition-colors resize-none"></textarea>
+                    </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="stack-grid">
-                <div class="card-item border border-borderSubtle bg-cards p-4 rounded hover:border-borderLight transition-colors group" data-category="core">
-                    <div class="text-[11px] text-hazardOrange font-bold mb-1">CORE_01</div>
-                    <div class="font-sans font-bold text-xs text-mainText mb-1 group-hover:text-hazardOrange transition-colors">Business Architecture</div>
-                    <p class="text-[11px] text-secondaryText leading-relaxed">System design, structural governance, and sustainable business modeling.</p>
-                </div>
-                <div class="card-item border border-borderSubtle bg-cards p-4 rounded hover:border-borderLight transition-colors group" data-category="core">
-                    <div class="text-[11px] text-hazardOrange font-bold mb-1">CORE_02</div>
-                    <div class="font-sans font-bold text-xs text-mainText mb-1 group-hover:text-hazardOrange transition-colors">Lean Operations</div>
-                    <p class="text-[11px] text-secondaryText leading-relaxed">Resource allocation, bottleneck analysis, and ultra-lean execution.</p>
-                </div>
-                <div class="card-item border border-borderSubtle bg-cards p-4 rounded hover:border-borderLight transition-colors group" data-category="ops">
-                    <div class="text-[11px] text-blueprintCyan font-bold mb-1">OPS_01</div>
-                    <div class="font-sans font-bold text-xs text-mainText mb-1 group-hover:text-blueprintCyan transition-colors">AI & Prompt Architecture</div>
-                    <p class="text-[11px] text-secondaryText leading-relaxed">LLM integration, workflow automation, and agentic intelligence.</p>
-                </div>
-                <div class="card-item border border-borderSubtle bg-cards p-4 rounded hover:border-borderLight transition-colors group" data-category="ops">
-                    <div class="text-[11px] text-blueprintCyan font-bold mb-1">OPS_02</div>
-                    <div class="font-sans font-bold text-xs text-mainText mb-1 group-hover:text-blueprintCyan transition-colors">Data & Relational Systems</div>
-                    <p class="text-[11px] text-secondaryText leading-relaxed">Structured databases, economic governance, and material tracking.</p>
-                </div>
+                    <div class="flex items-center justify-between pt-2">
+                        <span id="form-status" class="text-[11px] text-secondaryText">STATUS: READY_TO_TRANSMIT</span>
+                        <button type="submit" class="text-[11px] font-bold border border-blueprintCyan text-blueprintCyan hover:bg-blueprintCyan hover:text-black px-4 py-2 rounded cursor-pointer transition-all duration-200">
+                            TRANSMIT_PACKET
+                        </button>
+                    </div>
+                </form>
             </div>
         </section>
 
@@ -186,6 +190,7 @@
 
     </main>
 
+    <!-- Script interactivo -->
     <script src="script.js"></script>
 </body>
 </html>
